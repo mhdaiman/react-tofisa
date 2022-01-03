@@ -3,7 +3,7 @@
     grid-template-columns: repeat(3, 1fr);
     padding: 10px;
     grid-gap: 10px;
-    grid-template-rows: 210px;
+    grid-template-rows: repeat(minmax(200px,auto));
 }
 
 .blogs h1 {
@@ -49,3 +49,13 @@
 .btn:hover{
     cursor:pointer
 }
+
+@media screen and (max-width: 601px) {
+    .blogs{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        padding: 10px;
+        grid-gap: 10px;
+        grid-template-rows: 220px;
+    }
+  }
