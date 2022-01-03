@@ -1,0 +1,51 @@
+.blogs{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 10px;
+    grid-gap: 10px;
+    grid-template-rows: 210px;
+}
+
+.blogs h1 {
+    color:blueviolet
+}
+.blogs samall {
+    color:#000
+}
+.blog{
+    border : 1px solid #000;
+    border-radius: 5%;
+    box-shadow: 1px 1px 1px blueviolet;
+    padding: 10px;
+    
+
+}
+.blog:hover{
+    background-color: blueviolet;
+    opacity: 80%;
+}
+
+.blog:hover > h1{
+    background-color:#000;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5%;
+    opacity: 70%;
+}
+.blog:hover > p , small{
+    color: #fff;
+    padding: 12px;
+    border-radius: 5%;
+    opacity: 70%;
+}
+
+.blog button{
+    background-color: brown;
+    color: #fff;
+    border: 1px solid brown;
+    padding: 5px;
+    border-radius: 5px;
+}
+.blog button:hover{
+    cursor:pointer
+}
