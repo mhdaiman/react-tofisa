@@ -1,0 +1,40 @@
+{
+    "blogs": [
+        {
+            "title":"My new website 1",
+            "body":"lorem ipsum....",
+            "author":"mario",
+            "id":1
+        },
+        {
+            "title":"My new website 1",
+            "body":"lorem ipsum....",
+            "author":"mario",
+            "id":2
+        },
+        {
+            "title":"My new website 1",
+            "body":"lorem ipsum....",
+            "author":"mario",
+            "id":3
+        },
+        {
+            "title":"My new website 1",
+            "body":"lorem ipsum....",
+            "author":"mostafa",
+            "id":4
+        },
+        {
+            "title":"My new website 1",
+            "body":"lorem ipsum....",
+            "author":"mario",
+            "id":5
+        },
+        {
+            "title":"My new website 1",
+            "body":"lorem ipsum....",
+            "author":"mostafa",
+            "id":6
+        }
+      ]
+}

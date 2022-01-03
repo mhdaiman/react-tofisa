@@ -12,7 +12,7 @@ export default function ListBlog(props) {
                <div className='blog' key={blog.id}>
                 <h1>{blog.title}</h1>
                 <p>{blog.body}</p>
-                <button onClick={()=>handleDelete(blog.id)} className='btn'>delete</button>
+                <button className='btn' onClick={()=>handleDelete(blog.id)}>delete</button>
                 <small>{blog.author}</small>
                </div>
            ))}

@@ -39,13 +39,13 @@
     opacity: 70%;
 }
 
-.blog button{
+.btn{
     background-color: brown;
     color: #fff;
     border: 1px solid brown;
     padding: 5px;
     border-radius: 5px;
 }
-.blog button:hover{
+.btn:hover{
     cursor:pointer
 }
