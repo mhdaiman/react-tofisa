@@ -1,0 +1,32 @@
+.navbar{
+    display: flex;
+    border-bottom: 5px solid rgb(43, 116, 226);
+}
+
+.navbar .logo{
+    color: rgb(43, 116, 226);
+    padding-left: 50px;
+}
+
+.navbar .menu{
+  -ms-flex: 1; /* IE 10 */
+  flex: 1;
+}
+
+.menu {
+    list-style-type: none;
+}
+
+.menu .menu-item{
+    float: left;
+    margin-top: 12px;
+    margin-left: 12px;
+}
+
+.menu .menu-item a{
+    text-decoration: none;
+}
+
+.menu .menu-item a:hover{
+    color: rgb(43, 116, 226);
+}

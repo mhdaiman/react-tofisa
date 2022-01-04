@@ -7,7 +7,7 @@
 }
 
 .blogs h1 {
-    color:blueviolet
+    color: rgb(43, 116, 226);
 }
 .blogs samall {
     color:#000
@@ -15,28 +15,27 @@
 .blog{
     border : 1px solid #000;
     border-radius: 5%;
-    box-shadow: 1px 1px 1px blueviolet;
+    box-shadow: 1px 1px 1px  rgb(43, 116, 226);
     padding: 10px;
-    
-
 }
 .blog:hover{
-    background-color: blueviolet;
-    opacity: 80%;
+    opacity: 70%;
 }
 
 .blog:hover > h1{
-    background-color:#000;
     color: #fff;
     padding: 5px;
     border-radius: 5%;
-    opacity: 70%;
+    /* opacity: 70%; */
 }
 .blog:hover > p , small{
     color: #fff;
     padding: 12px;
     border-radius: 5%;
-    opacity: 70%;
+    /* opacity: 70%; */
+}
+.blog-link{
+    text-decoration: none;
 }
 
 .btn{
@@ -49,6 +48,8 @@
 .btn:hover{
     cursor:pointer
 }
+
+
 
 @media screen and (max-width: 601px) {
     .blogs{
