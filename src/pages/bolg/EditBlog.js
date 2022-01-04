@@ -1,30 +1,34 @@
 import React from 'react'
 import { useState } from 'react/cjs/react.development'
+import { useParams } from 'react-router-dom';
 // import { useHistory } from 'react-router-dom';//react-router-dom 5
 import { useNavigate } from 'react-router-dom';//react-router-dom 6
+import useFetch from '../../hooks/useFetsh';
 import loading from '../../images/loading.gif';
 
 
-export default function CreateBlog() {
+export default function EditBlog() {
+    const { id } = useParams();
+    const { data:blog, error, isPending } = useFetch("http://localhost:8000/blogs/" + id )
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
     const [author, setAuthor] = useState('mario');
-    const [isPending, setIsPending] = useState(false);
+    const [isPending1, setIsPending1] = useState(false);
     const history = useNavigate();
 
     //create new blog
-    function createBlog(e) {
+    function editBlog(e) {
         e.preventDefault();
-        const blog = { title, body, author }
-        setIsPending(true);
+        const editBlog = { title, body, author }
+        setIsPending1(true);
         setTimeout(() => {
-            fetch('http://localhost:8000/blogs', {
-                method: 'POST',
+            fetch('http://localhost:8000/blogs/' + blog.id, {
+                method: 'PUT',
                 headers: { "content-Type": "application/json" },
-                body: JSON.stringify(blog)
+                body: JSON.stringify(editBlog)
             }).then(() => {
-                setIsPending(false);
-                console.log("create new blog")
+                setIsPending1(false);
+                console.log("edited blog")
                 history('/')
             })
         }, 1000)
@@ -39,7 +43,7 @@ export default function CreateBlog() {
                 {isPending && <img src={loading} />}
             </div>
             <h2>Add a New Blog</h2>
-            <form onSubmit={createBlog}>
+            <form onSubmit={editBlog}>
                 <label>Blog title:</label>
                 <input
                     type="text"
@@ -60,9 +64,10 @@ export default function CreateBlog() {
                 >
                     <option value="mario">mario</option>
                     <option value="yoshi">yoshi</option>
+                    <option value="mostafa">mostafa</option>
                 </select>
-                {!isPending && <button type='submit'>Add Blog</button>}
-                {isPending && <button type='submit' disabled>Add Blog</button>}
+            <button type='submit'>Edit Blog</button>
+             {/* <button type='submit' disabled>Edit Blog</button> */}
             </form>
         </div>
     )

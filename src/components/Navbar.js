@@ -8,7 +8,7 @@ export default function Navbar() {
             <div className='logo'><h1>logo</h1></div>
             <ul className='menu'>
                 <li className='menu-item'><Link to="/">Home</Link></li>
-                <li className='menu-item'><Link to='/blog/create'>create Blog</Link></li>
+                <li className='menu-item'><Link to='/blogs/create'>create Blog</Link></li>
             </ul>
         </nav>
     )
