@@ -38,6 +38,14 @@
     text-decoration: none;
 }
 
+.pending{
+    text-align: center;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
 .btn{
     background-color: brown;
     color: #fff;
@@ -49,7 +57,16 @@
     cursor:pointer
 }
 
-
+.read-more-link{
+    color: blueviolet;
+    text-decoration: underline;
+    letter-spacing: 1px;
+    cursor: pointer;
+  }
+  .extra-content{
+    color: cornflowerblue;
+    font-weight: 500;
+  }
 
 @media screen and (max-width: 601px) {
     .blogs{

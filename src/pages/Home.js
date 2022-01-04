@@ -11,8 +11,10 @@ export default function Home() {
     const { data: blogs , error , isPending } = useFetch('http://localhost:8000/blogs')
     return (
         <div>
-            {isPending && <img src={loading} />}
-            {error && <div>{error}</div>}
+            <div className='pending'>
+                {isPending && <img src={loading} />}
+                {error && <div>{error}</div>}
+            </div>
             {blogs && <ListBlog blogs={blogs}></ListBlog>}
             <div><h1>filter data for blog author "mostafa"</h1></div>
             {blogs && <ListBlog blogs={blogs.filter((blog) => blog.author === "mostafa")}></ListBlog>}
